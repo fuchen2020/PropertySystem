@@ -8,8 +8,8 @@ URL：http://www.tpp.com/v1/login
 
 参数 |是否必须 | 说明
 ---|---|---
-username|是|用户名
-pwd|是|密码
+username |是 | 用户名
+pwd |是 | 密码
 
 ```
 {
@@ -34,8 +34,8 @@ pwd|是|密码
 
 参数 |是否必须 | 说明
 ---|---|---
-username|是|用户名
-pwd|是|密码
+username |是 | 用户名
+pwd |是 | 密码
 
 ```
 {
@@ -55,7 +55,7 @@ pwd|是|密码
 
 参数 |是否必须 | 说明
 ---|---|---
-username|是|用户名
+username |是 | 用户名
 
 ```json
 {
@@ -75,7 +75,7 @@ username|是|用户名
 
 参数 |是否必须 | 说明
 ---|---|---
-adKind|是|广告类型(1导航banner，2广告banner)
+adKind |是 | 广告类型(1导航banner，2广告banner)
 
 ```json
 {
@@ -101,14 +101,14 @@ adKind|是|广告类型(1导航banner，2广告banner)
 
 参数 |是否必须 | 说明
 ---|---|---
-keyword/是/商品名称关键字
-categoryId/否/分类id
-filterType/否/排序类型（1-综合 2-新品 3-评价）
-sortType/否/排序条件（1-销量 2-价格高到低 3-价格低到高）
-deliverChoose/否/选择类型（0-代表无选择 1代表京东配送 2-代表货到付款 4-代表仅看有货 3代表条件1+2 5代表条件1+4 6代表条件2+4）
-minPrice/否/最低价格
-maxPrice/否/最高价格
-brandId/否/品牌id
+keyword /是 / 商品名称关键字
+categoryId /否 / 分类id
+filterType /否 / 排序类型（1-综合 2-新品 3-评价）
+sortType /否 / 排序条件（1-销量 2-价格高到低 3-价格低到高）
+deliverChoose /否 / 选择类型（0-代表无选择 1代表京东配送 2-代表货到付款 4-代表仅看有货 3代表条件1+2 5代表条件1+4 6代表条件2+4）
+minPrice /否 / 最低价格
+maxPrice /否 / 最高价格
+brandId /否 / 品牌id
 
 ```json
 {
@@ -139,7 +139,7 @@ brandId/否/品牌id
 
 参数 |是否必须 | 说明
 ---|---|---
-userId/是/用户id
+userId /是 / 用户id
 
 ```json
 {
@@ -170,9 +170,9 @@ userId/是/用户id
 
 参数 |是否必须 | 说明
 ---|---|---
-userId/是/用户id
-productId/是/商品id
-buyCount/是/购买数量
+userId /是 / 用户id
+productId /是 / 商品id
+buyCount /是 / 购买数量
 
 ```json
 {
@@ -191,7 +191,7 @@ buyCount/是/购买数量
 
 参数 |是否必须 | 说明
 ---|---|---
-userId/是/用户id
+userId /是 / 用户id
 
 ```json
 {
@@ -209,8 +209,8 @@ userId/是/用户id
 
 参数 |是否必须 | 说明
 ---|---|---
-userId/是/用户id
-id/是/明细id
+userId /是 / 用户id
+id /是 / 明细id
 
 ```json
 {
