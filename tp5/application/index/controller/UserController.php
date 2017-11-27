@@ -3,8 +3,11 @@
 namespace app\index\controller;
 
 use app\index\model\User;
+use function MongoDB\BSON\toJSON;
 use think\Controller;
+use think\Db;
 use think\Request;
+use think\response\Json;
 
 class UserController extends Controller
 {
@@ -32,5 +35,7 @@ class UserController extends Controller
         return $this->fetch('add');
     }
 
-
+    public function test(){
+        var_dump(ROOT_PATH);
+    }
 }

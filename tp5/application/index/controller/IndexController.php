@@ -17,5 +17,9 @@ class IndexController extends Controller
         return $this->fetch();
     }
 
+    public  function ws(){
+        return $this->fetch('clien');
+    }
+
 
 }

@@ -8,6 +8,19 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
+use think\Route;
+Route::rule('user/index','index/user/index');
+Route::rule('user/add','index/user/add');
+Route::rule('index/ws','index/index/ws');
 
-\think\Route::rule('user/index','index/user/index');
-\think\Route::rule('user/add','index/user/add');
+
+//api接口路由
+
+Route::get(":v/login","api/:v.index/login");
+Route::post(":v/regist","api/:v.index/regist");
+Route::post(":v/reset","api/:v.index/reset");
+Route::post(":v/searchProduct","api/:v.index/searchProduct");
+Route::post(":v/shopCar","api/:v.index/shopCar");
+Route::post(":v/toShopCar","api/:v.index/toShopCar");
+Route::post(":v/shopCarNum","api/:v.index/shopCarNum");
+Route::post(":v/delShopCar","api/:v.index/delShopCar");
