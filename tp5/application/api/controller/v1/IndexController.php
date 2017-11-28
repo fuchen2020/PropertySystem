@@ -3,6 +3,8 @@
 namespace app\api\controller\v1;
 
 use app\api\controller\BaseController;
+use Lcobucci\JWT\Builder;
+use Lcobucci\JWT\Signer\Hmac\Sha256;
 use think\Controller;
 use think\Db;
 
@@ -21,6 +23,16 @@ class IndexController extends BaseController
         $user = Db::name('users')->where(['username' => $username])->find();
         if ($user) {
             if (password_verify($pwd, $user['password_hash'])) {
+                //登陆成功生成token------------------------------------------------
+                $signer = new Sha256();
+                $token = (new Builder())->setIssuer('http://chenziyong.vip') // Configures the issuer (iss claim)
+                ->setIssuedAt(time()) // Configures the time that the token was issue (iat claim)
+                ->setNotBefore(time() + 60) // Configures the time that the token can be used (nbf claim)
+                ->setExpiration(time() + 3600) // Configures the expiration time of the token (exp claim)
+                ->set('uid',$user) // Configures a new claim, called "uid"
+                ->sign($signer, 'chenziyong') // creates a signature using "testing" as key
+                ->getToken(); // Retrieves the generated token
+                //----------------------------------------------------------------
                 //统计当前用户待付款订单数
                 $waitPayCount = Db::name('order')->where(['users_id' => $user['id'], 'status' => 1])->count();
                 //统计当前用户待收货订单数
@@ -34,8 +46,8 @@ class IndexController extends BaseController
                         "userIcon" => "",
                         "waitPayCount" => $waitPayCount ? $waitPayCount : 0,
                         "waitReceiveCount" => $waitReceiveCount ? $waitReceiveCount : 0,
-//                       用户等级（1注册会员2铜牌会员3银牌会员4金牌会员5钻石会员）
                         "userLevel" => 1,
+                        'sign'=>(string)$token,
                     ],
                 ];
                 return $this->zJson($data);

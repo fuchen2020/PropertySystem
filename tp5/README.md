@@ -67,7 +67,7 @@ username |是 | 用户名
 ```
 ### 首页模块
 ---
-> 1. 首页banner（待写）
+> 4. 首页banner（待写）
 ---
 >URL:http://www.tpp.com/v1/banner
 
@@ -93,7 +93,7 @@ adKind |是 | 广告类型(1导航banner，2广告banner)
 }
 ```
 ---
-> 2. 首页搜索
+> 5. 首页搜索
 ---
 >URL:http://www.tpp.com/v1/searchProduct
 
@@ -131,7 +131,7 @@ brandId  | 否 |  品牌id
  
 ```
 ---
-> 3. 购物车信息
+> 6. 购物车信息
 ---
 >URL:http://www.tpp.com/v1/shopCar
 
@@ -162,7 +162,7 @@ userId  | 是 |  用户id
 }
 ```
 ---
-> 4. 加入购物车
+> 7. 加入购物车
 ---
 >URL:http://www.tpp.com/v1/toShopCar
 
@@ -183,7 +183,7 @@ buyCount  | 是 |  购买数量
 
 ```
 ---
-> 5. 购物车商品数
+> 8. 购物车商品数
 ---
 >URL:http://www.tpp.com/v1/shopCarNum
 
@@ -201,7 +201,26 @@ userId |是 | 用户id
 }
 ```
 ---
-> 6. 删除购物车明细
+> 9. 购物车
+---
+>URL:http://www.tpp.com/v1/shopCarNum
+
+>方式：psot
+
+参数 |是否必须 | 说明
+---|---|---
+userId |是 | 用户id
+
+```json
+{
+  "success": true,
+  "errorMsg": "",
+  "result": 2
+}
+```
+---
+---
+> 10. 删除购物车明细
 ---
 >URL:http://www.tpp.com/v1/delShopCar
 
